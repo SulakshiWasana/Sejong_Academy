@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="RegistrationFormContext" prefHeight="800.0" prefWidth="1215.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentFormController">
+   <children>
+      <Label layoutX="17.0" layoutY="10.0" prefHeight="101.0" prefWidth="1178.0" style="-fx-background-color: #9b59b6; -fx-background-radius: 20;" />
+      <TableView fx:id="tblStudent" layoutX="31.0" layoutY="289.0" prefHeight="475.0" prefWidth="1155.0">
+        <columns>
+          <TableColumn fx:id="colNIC" prefWidth="139.0" text="NIC" />
+          <TableColumn fx:id="colName" prefWidth="136.0" text="Name" />
+            <TableColumn fx:id="colGender" minWidth="0.0" prefWidth="103.0" text="Gender" />
+            <TableColumn fx:id="colDOB" minWidth="7.0" prefWidth="93.0" text="DOB" />
+            <TableColumn fx:id="colAge" prefWidth="58.0" text="Age" />
+            <TableColumn fx:id="colPassportNo" prefWidth="163.0" text="Passport No" />
+            <TableColumn fx:id="colAddress" prefWidth="154.0" text="Address" />
+            <TableColumn fx:id="colContactNo" prefWidth="128.0" text="Contact No" />
+            <TableColumn fx:id="colEmail" prefWidth="196.0" text="Email" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtSearch" layoutX="28.0" layoutY="149.0" onAction="#txtSearchOnAction" prefHeight="41.0" prefWidth="577.0" promptText="Search" style="-fx-background-radius: 30; -fx-border-color: #3498db; -fx-border-radius: 30;">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <ImageView fitHeight="101.0" fitWidth="293.0" layoutX="969.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="38.0" layoutY="7.0" prefHeight="107.0" prefWidth="455.0" text="| Student Form |" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="670.0" layoutY="149.0" mnemonicParsing="false" onAction="#OpenAddNewStudent" prefHeight="41.0" prefWidth="161.0" style="-fx-background-color: #2ecc71; -fx-background-radius: 30;" text="Add Student" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="1023.0" layoutY="149.0" mnemonicParsing="false" onAction="#DeleteStudentOnAction" prefHeight="41.0" prefWidth="161.0" style="-fx-background-color: #e74c3c; -fx-background-radius: 30;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Separator layoutX="39.0" layoutY="231.0" prefHeight="9.0" prefWidth="1134.0" style="-fx-background-color: #8c7ae6;" />
+      <Button layoutX="848.0" layoutY="149.0" mnemonicParsing="false" onAction="#OpenUpdateStudentForm" prefHeight="41.0" prefWidth="161.0" style="-fx-background-color: #e67e22; -fx-background-radius: 30;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

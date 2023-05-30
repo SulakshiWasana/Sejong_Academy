@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="764.0" prefWidth="616.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddNewClassFormController">
+   <children>
+      <Label prefHeight="89.0" prefWidth="616.0" style="-fx-background-color: #9b59b6;" text="   Add New Class" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="124.0" prefHeight="41.0" prefWidth="135.0" text="Class ID">
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+         <font>
+            <Font size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="39.0" layoutY="190.0" prefHeight="27.0" prefWidth="135.0" text="Class Name">
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+         <font>
+            <Font size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="39.0" layoutY="253.0" prefHeight="24.0" prefWidth="135.0" text="Class Shedule">
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+         <font>
+            <Font size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <TextField fx:id="txtCId" layoutX="168.0" layoutY="124.0" onAction="#SelectClassOnAction" prefHeight="19.0" prefWidth="409.0">
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <TextField fx:id="txtName" layoutX="168.0" layoutY="190.0" prefHeight="29.0" prefWidth="409.0">
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <TextField fx:id="txtShedule" layoutX="168.0" layoutY="253.0" prefHeight="19.0" prefWidth="409.0">
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <TableView fx:id="tblClass" layoutX="33.0" layoutY="424.0" prefHeight="305.0" prefWidth="554.0">
+        <columns>
+          <TableColumn fx:id="colCId" prefWidth="110.0" text="C1" />
+          <TableColumn fx:id="colName" minWidth="0.0" prefWidth="215.0" text="C2" />
+            <TableColumn fx:id="colShedule" minWidth="0.0" prefWidth="226.0" text="C2" />
+        </columns>
+      </TableView>
+      <Button layoutX="90.0" layoutY="336.0" mnemonicParsing="false" onAction="#DeleteClassOnAction" prefHeight="39.0" prefWidth="157.0" style="-fx-background-color: #e74c3c; -fx-background-radius: 30;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="262.0" layoutY="336.0" mnemonicParsing="false" onAction="#UpdateClassOnAction" prefHeight="39.0" prefWidth="157.0" style="-fx-background-color: #e67e22; -fx-background-radius: 30;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="430.0" layoutY="336.0" mnemonicParsing="false" onAction="#SaveClassOnAction" prefHeight="33.0" prefWidth="157.0" style="-fx-background-color: #2ecc71; -fx-background-radius: 30;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1215.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClassSheduleFormController">
+   <children>
+      <Label layoutX="19.0" layoutY="22.0" prefHeight="101.0" prefWidth="1178.0" style="-fx-background-color: #9b59b6; -fx-background-radius: 20;" />
+      <ImageView fitHeight="101.0" fitWidth="293.0" layoutX="971.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="39.0" layoutY="10.0" prefHeight="125.0" prefWidth="455.0" text="| Class Shedule Form |" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="381.0" layoutY="221.0" prefHeight="41.0" prefWidth="226.0" promptText="Class Name" style="-fx-background-radius: 30;">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="txtShedule" layoutX="619.0" layoutY="221.0" prefHeight="41.0" prefWidth="196.0" promptText="Shedule" style="-fx-background-radius: 30;">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <ComboBox fx:id="cmbClassIds" layoutX="202.0" layoutY="221.0" prefHeight="41.0" prefWidth="153.0" promptText="Select Class ID" style="-fx-background-radius: 30;" />
+      <Button layoutX="1013.0" layoutY="153.0" mnemonicParsing="false" onAction="#OpenAddNewClassForm" prefHeight="41.0" prefWidth="164.0" style="-fx-background-color: #34495e; -fx-background-radius: 30;" text="+ New Class" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Separator layoutX="711.0" layoutY="153.0" orientation="VERTICAL" prefHeight="41.0" prefWidth="0.0" />
+      <TextField fx:id="txtRName" layoutX="309.0" layoutY="153.0" prefHeight="41.0" prefWidth="374.0" promptText="Student Name" style="-fx-background-radius: 30;">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="txtRId" layoutX="52.0" layoutY="153.0" onAction="#SearchRegistrationOnAction" onKeyReleased="#enterRegistrationEvent" prefHeight="41.0" prefWidth="244.0" promptText="Enter Registration ID" style="-fx-background-radius: 30;">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TableView fx:id="tblClassRegistration" layoutX="52.0" layoutY="349.0" prefHeight="412.0" prefWidth="1113.0">
+        <columns>
+          <TableColumn fx:id="colRId" minWidth="0.0" prefWidth="220.0" text=" Registration ID" />
+            <TableColumn fx:id="colCId" minWidth="0.0" prefWidth="175.0" text="Class ID" />
+            <TableColumn fx:id="colName" minWidth="0.0" prefWidth="293.0" text="Student Name" />
+            <TableColumn fx:id="colCName" minWidth="0.0" prefWidth="237.0" text="Class Name" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtSearch" layoutX="731.0" layoutY="153.0" onAction="#txtSearchOnAction" prefHeight="41.0" prefWidth="244.0" promptText="Search" style="-fx-background-radius: 30; -fx-border-color: #3498db; -fx-border-radius: 30;">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Separator layoutX="991.0" layoutY="153.0" orientation="VERTICAL" prefHeight="41.0" prefWidth="7.0" />
+      <Button layoutX="1013.0" layoutY="221.0" mnemonicParsing="false" onAction="#DeleteClassOnAction" prefHeight="41.0" prefWidth="164.0" style="-fx-background-color: #e74c3c; -fx-background-radius: 30;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnAdd" layoutX="834.0" layoutY="221.0" mnemonicParsing="false" onAction="#SaveClassRegistrationOnAction" prefHeight="41.0" prefWidth="164.0" style="-fx-background-color: #2ecc71; -fx-background-radius: 30;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Separator layoutX="52.0" layoutY="305.0" prefHeight="9.0" prefWidth="1134.0" style="-fx-background-color: #8c7ae6;" />
+      <Label fx:id="lbNum" alignment="CENTER" layoutX="57.0" layoutY="222.0" prefHeight="39.0" prefWidth="114.0" style="-fx-background-color: #bdc3c7; -fx-background-radius: 30;" text="CR-001" />
+   </children>
+</AnchorPane>

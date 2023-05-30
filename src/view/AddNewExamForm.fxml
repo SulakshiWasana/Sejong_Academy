@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="764.0" prefWidth="616.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddNewExamFormController">
+   <children>
+      <Label prefHeight="89.0" prefWidth="616.0" style="-fx-background-color: #9b59b6;" text="   Add New Exam" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="124.0" prefHeight="31.0" prefWidth="135.0" text="Exam ID">
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+         <font>
+            <Font size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="39.0" layoutY="190.0" prefHeight="31.0" prefWidth="135.0" text="Exam Name">
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+         <font>
+            <Font size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="39.0" layoutY="253.0" prefHeight="31.0" prefWidth="135.0" text="Exam Shedule">
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+         <font>
+            <Font size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <TextField fx:id="txtEId" layoutX="168.0" layoutY="124.0" onAction="#SelectExamOnAction" prefHeight="46.0" prefWidth="409.0">
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <TextField fx:id="txtName" layoutX="168.0" layoutY="190.0" prefHeight="46.0" prefWidth="409.0">
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <TextField fx:id="txtDate" layoutX="168.0" layoutY="253.0" prefHeight="46.0" prefWidth="409.0">
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <Button layoutX="90.0" layoutY="336.0" mnemonicParsing="false" onAction="#DeleteExamOnAction" prefHeight="46.0" prefWidth="157.0" style="-fx-background-color: #e74c3c; -fx-background-radius: 30;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="262.0" layoutY="336.0" mnemonicParsing="false" onAction="#UpdateExamOnAction" prefHeight="46.0" prefWidth="157.0" style="-fx-background-color: #e67e22; -fx-background-radius: 30;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="435.0" layoutY="336.0" mnemonicParsing="false" onAction="#SaveExamOnAction" prefHeight="46.0" prefWidth="157.0" style="-fx-background-color: #2ecc71; -fx-background-radius: 30;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TableView fx:id="tblExam" layoutX="32.0" layoutY="415.0" prefHeight="319.0" prefWidth="553.0">
+        <columns>
+          <TableColumn fx:id="colEId" prefWidth="139.0" text="Exam ID" />
+          <TableColumn fx:id="colName" prefWidth="258.0" text="Exam Name" />
+            <TableColumn fx:id="colDate" prefWidth="153.0" text="Exam Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

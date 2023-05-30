@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="GivenTuteReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d400a6e7-f442-44d0-a13c-6097247f1bde">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JDBC Connection"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="Search_ID" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT * FROM TuteBookDetails WHERE RId=$P{Search_ID}]]>
+	</queryString>
+	<field name="RId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="RId"/>
+		<property name="com.jaspersoft.studio.field.label" value="RId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tutebookdetails"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TId"/>
+		<property name="com.jaspersoft.studio.field.label" value="TId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tutebookdetails"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Qty" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Qty"/>
+		<property name="com.jaspersoft.studio.field.label" value="Qty"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tutebookdetails"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="67" splitType="Stretch">
+			<staticText>
+				<reportElement x="100" y="10" width="370" height="30" uuid="1b13e177-4a51-4791-a055-eb1f031eddb4"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Given Tute & Books For Student]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="25" y="1" width="140" height="30" uuid="328cf807-4634-4b88-94c2-c81fc930d195">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="78dfa70e-ce8f-4e3a-9283-f726edc42aac"/>
+				</reportElement>
+				<box topPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[RId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="1" width="140" height="30" uuid="44fce5e6-2179-49a4-b4fc-11344b766828">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ca421ffb-866f-4396-b280-3c0500ec6b6a"/>
+				</reportElement>
+				<box topPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[TId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="1" width="140" height="30" uuid="2a0cf083-0a41-4c78-838e-36846ec84eb5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e9fc681d-c1d6-4cbe-b812-c7fa2e610b9d"/>
+				</reportElement>
+				<box topPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="25" y="1" width="140" height="30" uuid="d7091d9f-1f65-4afb-84ed-ff030e35c6b1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="78dfa70e-ce8f-4e3a-9283-f726edc42aac"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="1" width="140" height="30" uuid="87555de1-2f00-4aa5-90da-33037b4caba0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ca421ffb-866f-4396-b280-3c0500ec6b6a"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="395" y="1" width="140" height="30" uuid="c9cf6adb-c937-43d0-95be-ed8322eb59ce">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e9fc681d-c1d6-4cbe-b812-c7fa2e610b9d"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Qty}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="20" width="560" height="30" uuid="d0190d8f-8fb1-49e5-a518-4e3c4d98f925"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[-------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="560" height="30" uuid="74cba11e-7407-40de-9076-14a3ed49e65b"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[  | Sejong Academy | Korean Language Help Center | 071 44 00 696 | 077 34 83 304 |]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
